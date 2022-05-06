@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<!--
+Project name(项目名称)：Element_UI_Popover
+  File name(文件名): test3
+  Authors(作者）: mao
+  Author QQ：1296193245
+  GitHub：https://github.com/maomao124/
+  Date(创建日期)： 2022/5/6
+  Time(创建时间)： 14:54
+  Description(描述)： 无
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/element-ui.css">
+    <script src="js/vue.js"></script>
+    <script src="js/element-ui.js"></script>
+    <style>
+        .el-popover {
+            max-width: 300px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="app">
+
+    <el-popover
+            placement="top"
+            width="160"
+            v-model="visible">
+        <p>确定删除吗？</p>
+        <div style="text-align: right; margin: 0">
+            <el-button size="mini" type="text" @click="visible = false">取消</el-button>
+            <el-button type="primary" size="mini" @click="visible = false">确定</el-button>
+        </div>
+        <el-button slot="reference">删除</el-button>
+    </el-popover>
+
+</div>
+
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            visible: false
+        },
+        methods: {},
+        mounted()
+        {
+
+        }
+    })
+</script>
+
+</body>
+</html>
